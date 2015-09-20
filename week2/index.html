@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>A Pet-Mad Lib</title>
+
+	<style>
+		#cont {
+			position:relative;
+			left:20px;
+		}
+		#madlib {
+			font-style:italic;
+		}
+		#name {
+			color:#456789;
+		}
+		#pnoun {
+			color:#ffff00;
+		}
+		#number {
+			color:#f38d93;
+		}
+		#pettype {
+			color:#b2df87;
+		}
+		#petname {
+			color:#eb73f2;
+		}
+		#petverb {
+			color:#025fbf;
+		}
+		body {
+			background:#ddd;
+		}
+		
+		p {
+			border-left:3px solid #ac2354;
+			padding-left:10px;
+		}
+		h1, h4 {
+			font-style:italic;
+			color: #ac2354;
+			padding-top:20px;
+		}
+	</style>
+
+</head>
+
+<body>
+
+    <!-- <p>GitHub is how people build <span id="noun">[noun]</span>. With a community of more than 10 million <span id="pnoun">[plural noun]</span>, developers can <span id="verb">[verb]</span>, use, and contribute to over <span id="number">[number]</span> projects using a powerful collaborative development workflow.</p> -->
+    <div id="cont">
+	    <h1>A Short Story</h1>
+
+	    <p>
+	    	I would like to tell you the short story of a nice person named <span id="name">[name]</span>, who was the owner of multiple <span id="pnoun">[plural noun]</span>; <span id="number">[number]</span>, to be precise. <br>He once decided to put one <span id="pettype">[pet type]</span> in each of them, with unexpected results. <br>One pet, named <span id="petname">[pet noun]</span>, decides to <span id="petverb">[verb]</span>... and that's where the story ends!
+	    </p>
+
+	    <h4>List of submitted words</h4>
+	    
+	    <p id="madlib"></p>
+</div>
+
+<script>
+    // store each prompt response in a variable.
+    var name = prompt("Enter a name");
+    var pnoun = prompt("Enter a plural noun");
+    var number = prompt("Enter a number");
+    var pettype = prompt("Enter a pet animal type");
+    var petname = prompt("Enter a pet name");
+    var petverb  = prompt("Enter a pet verb");
+    //log out each response from the user. to make the output more readable, we'll add a string before each variable
+    console.log("the noun is: " + name);
+    console.log("the plural noun is: " + pnoun);
+    console.log("the number is: " + number);
+    console.log("the pet animal is: " + pettype);
+    console.log("the pet name is: " + petname);
+    console.log("the pet verb is: " + petverb);
+    //log out each response from the user. to make the output more readable, we'll add a string before each variable
+    document.getElementById('name').innerHTML = name;
+    document.getElementById('pnoun').innerHTML = pnoun;
+    document.getElementById('number').innerHTML = number;   
+    document.getElementById('pettype').innerHTML = pettype;
+    document.getElementById('petname').innerHTML = petname;
+    document.getElementById('petverb').innerHTML = petverb;
+    //array
+    var madlist = [name, pnoun, number, pettype, petname, petverb];
+    var madlist = madlist.join('<br>');
+	document.getElementById("madlib").innerHTML = madlist;
+</script>
+
+</body>
+</html>
