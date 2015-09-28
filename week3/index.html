@@ -95,7 +95,7 @@ button:active {
         var questionText = document.getElementById('question');
         questionText.innerHTML = question;
         
-        // Answers Dr. Kno can return. Array
+        // Answers Dr. Know can return. Array
 		var answers = ['Most likely.', 'Unlikely.', 'Maybe.', 'Survive and you will see!', 'This question has no answer!', 'You already know the answer.', 'Dr. Know knows it all!', 'I deserve a better question than this one.', 'The answer is inside your soul...', 'I know the answer to this question. Do you?'];  
 
         // Number of possible answers 
@@ -122,9 +122,8 @@ button:active {
             // Access the DOM element we want to to change
             var fortuneText = document.getElementById('answer');
 
-            if ( answer == answer ) {
-                fortuneText.innerHTML = answers[answer];
-            }
+
+            fortuneText.innerHTML = answers[answer];
 
         }
 
