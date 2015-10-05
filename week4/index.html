@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Complex Slideshow</title>
+<style>
+* {
+	margin:0;
+	padding:0;
+}
+
+body {
+	background:#000;
+	font-family:Impact, Charcoal, sans-serif;
+	text-transform:uppercase;
+}
+
+header {
+	position:relative;
+    margin: 0 auto;
+    text-align: center;
+    color:red;
+    font-size:30px;
+    margin-top:80px;
+}
+
+#slideshow {
+    width:1400px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+#currentPhoto {
+	width:100%;
+	height:auto;
+}
+
+#currentCaption {
+	font-size:60px;
+	color:#fff;
+}
+
+.btn {
+	width:100px;
+	height:60px;
+	background:white;
+	color:black;
+	font-size:16px;
+	text-transform:uppercase;
+	font-weight:bold;
+}
+
+.left {
+	position:relative;
+	top:424px;
+	left:-600px;
+	z-index:0;
+}
+
+.right {
+	position:relative;
+	top:424px;
+	left:600px;
+	z-index:0;
+}
+
+</style>
+</head>
+
+<body>
+	<header>:: Complex Slideshow ::</header>
+    <div id="slideshow">
+        <p id="currentCaption">Predator</p>
+        <button class="btn left" onclick="previous()">Previous</button>
+        <button class="btn right" onclick="next()">Next</button>
+        <img id="currentPhoto" src="images/a.jpg"/>
+    </div>
+    <script>
+    
+	    var slideshow = {
+	        directory: "images/",
+	        photos:["a.jpg","b.jpg","c.jpg","d.jpg","e.jpg","f.jpg","g.jpg","h.jpg","i.jpg","j.jpg","k.jpg","l.jpg"],
+	        captions:["Predator","Polygons","Comedy Club","Virus","Back to School","Dark Magic","Vintage 70s","Who Is There?","Etna","Disturbance","Not Springtime Yet","The Old Good Print World"],
+	        currentPhoto: 0,
+	        getPrevious: function(){
+	            if (this.currentPhoto == 0) 
+	                this.currentPhoto = this.photos.length-1;
+	            else
+	                this.currentPhoto--;
+
+	            var photo   = this.directory + this.photos[this.currentPhoto];
+	            var caption = this.captions[this.currentPhoto];
+	            return { "photo": photo, "caption": caption };
+	        },
+	        getNext: function(){
+	            if (this.currentPhoto == this.photos.length-1) 
+	                this.currentPhoto = 0;
+	            else
+	                this.currentPhoto++;
+
+	            var photo   = this.directory + this.photos[this.currentPhoto];
+	            var caption = this.captions[this.currentPhoto];
+	            return { "photo": photo, "caption": caption };
+	        }
+	    };
+
+	    function next(){
+	        var image = slideshow.getNext();    
+	        document.getElementById("currentPhoto").src = image.photo;
+	        document.getElementById("currentCaption").innerHTML = image.caption;
+	    }
+
+	    function previous(){
+	        var image = slideshow.getPrevious();
+	        document.getElementById("currentPhoto").src = image.photo;
+	        document.getElementById("currentCaption").innerHTML = image.caption;
+	    }
+    </script>
+</body>
+</html>
