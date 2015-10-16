@@ -6,6 +6,7 @@
 	<title>Week 5</title>
 
 	<style>
+
 		/* reset */
 		* {
 			margin:0;
@@ -14,7 +15,7 @@
 
 		/* page background */
 		body {
-			background-color:#666;
+			background-color:#000;
 		}
 
 		/* remove button glow */
@@ -31,25 +32,40 @@
 			height:50vh;
 			border:0;
 			cursor:pointer;
-			font-size:1.6em;
-			font-family:"Trebuchet MS", Helvetica, sans-serif;
-			font-weight:bold;
-			text-transform:uppercase;
 			z-index:0;
+			overflow:hidden;
 		}
 
-		/* grey/orange button */
+		/* yellow button */
 		#btn1 {
 			top: -50%; left: 0; bottom: 0;
 			background-color:#F2B33D;
 			color:#4E0200;
 		}
 
-		/* blue/white button */
+		/* light-blue button */
 		#btn2 {
 			top: 50%; left: 0; bottom: 0;
 			background-color:#CFDFFF;
 			color:#090126;
+		}
+
+		/* vertical, stacked word */
+		.vertical {
+		    font-family: monospace;
+		    font-size:1.6em;
+			font-weight:bold;
+			text-transform:uppercase;
+			-ms-writing-mode: tb-rl;
+			-webkit-writing-mode: vertical-rl;
+			-moz-writing-mode: vertical-rl;
+			-ms-writing-mode: vertical-rl;
+			writing-mode: vertical-rl;
+			-webkit-text-orientation: upright;
+			-moz-text-orientation: upright;
+			-ms-text-orientation: upright;
+			text-orientation: upright;
+			letter-spacing:10px;
 		}
 
 		/* general column settings */
@@ -62,7 +78,7 @@
 
 		/* column colors */
 		#box1 {
-			background-color:none;
+			background-color:#4E0200;
 		}
 		#box2 {
 			background-color:#FF8D19 ;
@@ -86,7 +102,7 @@
 			background-color:#4E0200;
 		}
 		#box9 {
-			background-color:none;
+			background-color:#090126;
 		}
 		#box10 {
 			background-color:#ADD5F7;
@@ -134,35 +150,38 @@
 	<div id="box15" class="square"></div>
 	<div id="box16" class="square"></div>
 
-	<!-- grey/orange button -->	
-	<button class="btn" id="btn1">Click</button>
+	<!-- yellow button -->	
+	<button class="btn" id="btn1"><span class="vertical">Click</span></button>
 	
-	<!-- blue/white button -->	
-	<button class="btn" id="btn2">Click</button>
+	<!--  light-blue button -->	
+	<button class="btn" id="btn2"><span class="vertical">Click</span></button>
 
     <script>
 	$(document).ready(function(){
 
 			// warm colors
 		    $("#btn1").click(function(){
+				
+				// yellow button animation out
+				if ( $("#btn1").hasClass( "active" ) ) {
+			    	$("#btn1").removeClass('active');
+			    	$("#btn1").animate({top:'-50%'}, 500);
+			    	$("#btn1").animate({height:'50vh'}, 500);
+			    	setTimeout( function(){
+				      $("#btn1").css('z-index','0');
+				    },1000);
+				} 
+				
+				// yellow button animation in
+				else {
+			    	$("#btn1").css('z-index', 10000);
+			    	$("#btn1").addClass('active');
+			    	$("#btn1").animate({top:'0'}, 500);
+			    	$("#btn1").animate({height:'100vh'}, 500);
+				}
 
-if ( $("#btn1").hasClass( "active" ) ) {
-		    	// yellow button animation out
-		    	$("#btn1").removeClass('active');
-		    	$("#btn1").animate({top:'-50%'}, 500);
-		    	$("#btn1").animate({height:'50vh'}, 500);
-		    	setTimeout( function(){
-			      $("#btn1").css('z-index','0');
-			    },1000);
-} else {
-		    	// yellow button animation in
-		    	$("#btn1").css('z-index', 10000);
-		    	$("#btn1").addClass('active');
-		    	$("#btn1").animate({top:'0'}, 500);
-		    	$("#btn1").animate({height:'100vh'}, 500);
-}
 		    	// warm columns fading
-		        $("#box1").fadeToggle(1600);
+		        $("#box1").fadeToggle(400);
 		        $("#box2").fadeToggle(1400);
 		        $("#box3").fadeToggle(1200);
 		        $("#box4").fadeToggle(1000);
@@ -175,24 +194,26 @@ if ( $("#btn1").hasClass( "active" ) ) {
 			// cold colors
 		    $("#btn2").click(function(){
 
-if ( $("#btn2").hasClass( "active" ) ) {
 		    	// light-blue animation out
-		    	$("#btn2").removeClass('active');
-		    	$("#btn2").animate({top:'50%'}, 500);
-		    	$("#btn2").animate({height:'50vh'}, 500);
-		    	setTimeout( function(){
-			      $("#btn2").css('z-index','0');
-			    },1000);
-} else {
+				if ( $("#btn2").hasClass( "active" ) ) {
+			    	$("#btn2").removeClass('active');
+			    	$("#btn2").animate({top:'50%'}, 500);
+			    	$("#btn2").animate({height:'50vh'}, 500);
+			    	setTimeout( function(){
+				      $("#btn2").css('z-index','0');
+				    },1000);
+				} 
+
 		    	// light-blue button animation in
-		    	$("#btn2").css('z-index', 10000);
-		    	$("#btn2").addClass('active');
-		    	$("#btn2").animate({top:'0'}, 500);
-		    	$("#btn2").animate({height:'100vh'}, 500);
+				else {
+			    	$("#btn2").css('z-index', 10000);
+			    	$("#btn2").addClass('active');
+			    	$("#btn2").animate({top:'0'}, 500);
+			    	$("#btn2").animate({height:'100vh'}, 500);
 }
 
 		    	// cold columns fading
-		        $("#box9").fadeToggle(1600);
+		        $("#box9").fadeToggle(400);
 		        $("#box10").fadeToggle(1400);
 		        $("#box11").fadeToggle(1200);
 		        $("#box12").fadeToggle(1000);
