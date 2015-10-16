@@ -162,21 +162,21 @@
 		    $("#btn1").click(function(){
 				
 				// yellow button animation out
-				if ( $("#btn1").hasClass( "active" ) ) {
-			    	$("#btn1").removeClass('active');
-			    	$("#btn1").animate({top:'-50%'}, 500);
-			    	$("#btn1").animate({height:'50vh'}, 500);
+				if ( $(this).hasClass( "active" ) ) {
+			    	$(this).removeClass('active');
+			    	$(this).animate({top:'-50%'}, 500);
+			    	$(this).animate({height:'50vh'}, 500);
 			    	setTimeout( function(){
-				      $("#btn1").css('z-index','0');
+				      $("#btn2").css('z-index','0');
 				    },1000);
 				} 
 				
 				// yellow button animation in
 				else {
-			    	$("#btn1").css('z-index', 10000);
-			    	$("#btn1").addClass('active');
-			    	$("#btn1").animate({top:'0'}, 500);
-			    	$("#btn1").animate({height:'100vh'}, 500);
+			    	$(this).css('z-index', 10000);
+			    	$(this).addClass('active');
+			    	$(this).animate({top:'0'}, 500);
+			    	$(this).animate({height:'100vh'}, 500);
 				}
 
 		    	// warm columns fading
@@ -194,10 +194,10 @@
 		    $("#btn2").click(function(){
 
 		    	// light-blue animation out
-				if ( $("#btn2").hasClass( "active" ) ) {
-			    	$("#btn2").removeClass('active');
-			    	$("#btn2").animate({top:'50%'}, 500);
-			    	$("#btn2").animate({height:'50vh'}, 500);
+				if ( $(this).hasClass( "active" ) ) {
+			    	$(this).removeClass('active');
+			    	$(this).animate({top:'50%'}, 500);
+			    	$(this).animate({height:'50vh'}, 500);
 			    	setTimeout( function(){
 				      $("#btn2").css('z-index','0');
 				    },1000);
@@ -205,10 +205,10 @@
 
 		    	// light-blue button animation in
 				else {
-			    	$("#btn2").css('z-index', 10000);
-			    	$("#btn2").addClass('active');
-			    	$("#btn2").animate({top:'0'}, 500);
-			    	$("#btn2").animate({height:'100vh'}, 500);
+			    	$(this).css('z-index', 10000);
+			    	$(this).addClass('active');
+			    	$(this).animate({top:'0'}, 500);
+			    	$(this).animate({height:'100vh'}, 500);
 }
 
 		    	// cold columns fading
