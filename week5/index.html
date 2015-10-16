@@ -6,13 +6,17 @@
 	<title>Week 5</title>
 
 	<style>
+		/* reset */
 		* {
 			margin:0;
 			padding:0;
 		}
+
 		body {
 			background-color:#666;
 		}
+
+		/* general button settings */
 		.btn {
 			margin: auto;
 			position: absolute;
@@ -25,22 +29,30 @@
 			font-weight:bold;
 			text-transform:uppercase;
 		}
+
+		/* grey/orange button */
 		#btn1 {
 			top: -50%; left: 0; bottom: 0;
 			background-color:#333;
 			color:#DF6F2E;
 		}
+
+		/* blue/white button */
 		#btn2 {
 			top: 50%; left: 0; bottom: 0;
 			background-color:#212640;
 			color:#fff;
 		}
+
+		/* general column settings */
 		.square {
 			display:none;
 		    width:12.5vw;
 			height:100vh;
 			float:left;
 		}
+
+		/* column colors */
 		#box1 {
 			background-color:none;
 		}
@@ -93,7 +105,8 @@
 </head>
 
 <body>
-
+	
+	<!-- columns w/warm colors -->
 	<div id="box1" class="square" ></div>
 	<div id="box2" class="square"></div>
 	<div id="box3" class="square"></div>
@@ -103,6 +116,7 @@
 	<div id="box7" class="square"></div>
 	<div id="box8" class="square"></div>
 
+	<!-- columns w/cold colors -->
 	<div id="box9" class="square" ></div>
 	<div id="box10" class="square"></div>
 	<div id="box11" class="square"></div>
@@ -112,16 +126,24 @@
 	<div id="box15" class="square"></div>
 	<div id="box16" class="square"></div>
 
+	<!-- grey/orange button -->	
 	<button class="btn" id="btn1">Click</button>
+	
+	<!-- blue/white button -->	
 	<button class="btn" id="btn2">Click</button>
 
     <script>
 	$(document).ready(function(){
 
+			// warm colors
 		    $("#btn1").click(function(){
+
+		    	// grey/orange button animation
 		    	$("#btn1").css('z-index', 10000);
 		    	$("#btn1").animate({top:'0'}, 1000);
 		    	$("#btn1").animate({height:'100vh'}, 500);
+
+		    	// warm columns fading
 		        $("#box1").fadeToggle(1600);
 		        $("#box2").fadeToggle(1400);
 		        $("#box3").fadeToggle(1200);
@@ -132,10 +154,15 @@
 		        $("#box8").fadeToggle(200);
 		    });
 
+			// cold colors
 		    $("#btn2").click(function(){
+
+		    	// blue/white button animation
 		    	$("#btn2").css('z-index', 10000);
 		    	$("#btn2").animate({top:'0'}, 1000);
 		    	$("#btn2").animate({height:'100vh'}, 500);
+
+		    	// cold columns fading
 		        $("#box9").fadeToggle(1600);
 		        $("#box10").fadeToggle(1400);
 		        $("#box11").fadeToggle(1200);
