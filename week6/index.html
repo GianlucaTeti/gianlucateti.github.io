@@ -110,38 +110,38 @@
 			// loop through each element in the JSON weather array 
 			$.each( data.sundayny, function( key, val ) {
 			    // create a new p element that contains data from the JSON
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    // add the <p> element to the <div> tag
 			    $('#box2').append(el2);
 			});
 
 			$.each( data.mondayny, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box3').append(el2);
 			});
 
 			$.each( data.tuesdayny, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box4').append(el2);
 			});
 
 			$.each( data.wednesdayny, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box5').append(el2);
 			});
 
 			$.each( data.thursdayny, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box6').append(el2);
 			});
 
 			$.each( data.fridayny, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box7').append(el2);
 			});
 
 			$.each( data.saturdayny, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box8').append(el2);
 			});
 
@@ -150,38 +150,38 @@
 			// loop through each element in the JSON weather array 
 			$.each( data.sundaybstn, function( key, val ) {
 			    // create a new p element that contains data from the JSON
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    // add the <p> element to the <div> tag
 			    $('#box10').append(el2);
 			});
 
 			$.each( data.mondaybstn, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box11').append(el2);
 			});
 
 			$.each( data.tuesdaybstn, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box12').append(el2);
 			});
 
 			$.each( data.wednesdaybstn, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box13').append(el2);
 			});
 
 			$.each( data.thursdaybstn, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box14').append(el2);
 			});
 
 			$.each( data.fridaybstn, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box15').append(el2);
 			});
 
 			$.each( data.saturdaybstn, function( key, val ) {
-			    var el2 = $("<p>" + val.day + "<br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%</p>");
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
 			    $('#box16').append(el2);
 			});
 
