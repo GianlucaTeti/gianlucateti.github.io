@@ -1,0 +1,131 @@
+		/* reset */
+		* {
+			margin:0;
+			padding:0;
+		}
+
+		/* page background */
+		body {
+			background-color:#000;
+		}
+
+		p {
+			text-align:left;
+			margin-bottom:20px;
+		}
+
+		/* remove button glow */
+		:focus {
+		    outline-color: transparent;
+		    outline-style: none;
+		 }
+
+		/* general button settings */
+		.btn {
+			margin: auto;
+			position: absolute;
+		    width:12.5vw;
+			height:50vh;
+			border:0;
+			cursor:pointer;
+			z-index:0;
+		}
+
+		/* yellow button */
+		#btn1 {
+			top: -50%; left: 0; bottom: 0;
+			background-color:#F2B33D;
+			color:#4E0200;
+		}
+
+		/* light-blue button */
+		#btn2 {
+			top: 50%; left: 0; bottom: 0;
+			background-color:#CFDFFF;
+			color:#090126;
+		}
+
+		/* vertical, stacked word */
+		.vertical {
+		    font-family: monospace;
+		    font-size:1.6em;
+			font-weight:bold;
+			text-transform:uppercase;
+			-ms-writing-mode: tb-rl;
+			-webkit-writing-mode: vertical-rl;
+			-moz-writing-mode: vertical-rl;
+			-ms-writing-mode: vertical-rl;
+			writing-mode: vertical-rl;
+			-webkit-text-orientation: upright;
+			-moz-text-orientation: upright;
+			-ms-text-orientation: upright;
+			text-orientation: upright;
+			letter-spacing:10px;
+		}
+
+		/* general column settings */
+		.square {
+			display:none;
+		    width:11.5vw;
+			height:100vh;
+			float:left;
+			padding:0.5%;
+		}
+
+		/* column colors */
+		#box1 {
+			background-color:#4E0200;
+		}
+		#box2 {
+			background-color:#FF8D19;
+		}
+		#box3 {
+			background-color:#DF6F2E;
+		}
+		#box4 {
+			background-color:#CA5833;
+		}
+		#box5 {
+			background-color:#8F0C00;
+			color:#FF8D19;
+		}
+		#box6 {
+			background-color:#702D19;
+			color:#FF8D19;
+		}
+		#box7 {
+			background-color:#5E1808;
+			color:#DF6F2E;
+		}
+		#box8 {
+			background-color:#4E0200;
+			color:#CA5833;
+		}
+		#box9 {
+			background-color:#090126;
+		}
+		#box10 {
+			background-color:#ADD5F7;
+		}
+		#box11 {
+			background-color:#7FB2F0;
+		}
+		#box12 {
+			background-color:#4E7AC7;
+		}
+		#box13 {
+			background-color:#465B99;
+			color:#ADD5F7;
+		}
+		#box14 {
+			background-color:#35478C;
+			color:#ADD5F7;
+		}
+		#box15 {
+			background-color:#0F0140;
+			color:#7FB2F0;
+		}
+		#box16 {
+			background-color:#090126;
+			color:#4faFF7;
+		}

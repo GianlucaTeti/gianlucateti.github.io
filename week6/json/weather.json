@@ -1,0 +1,65 @@
+
+
+{
+
+
+	"sundayny": [
+		{"day": "Sunday", "temp": 100, "precip" : 20}
+	],
+
+	"mondayny": [
+		{"day": "Monday", "temp": 80, "precip" : 13}
+	],
+
+	"tuesdayny": [
+		{"day": "Tuesday", "temp": 93, "precip" : 5.2}
+	],
+
+	"wednesdayny": [
+		{"day": "Wednesday", "temp": 64, "precip" : 0.3}
+	],
+
+	"thursdayny": [
+		{"day": "Thursday", "temp": 32, "precip" : 8}
+	],
+
+	"fridayny": [
+		{"day": "Friday", "temp": 46, "precip" : 40}
+	],
+
+	"saturdayny": [
+		{"day": "Saturday", "temp": 50, "precip" : 65}
+	],
+
+	"sundaybstn": [
+		{"day": "Sunday", "temp": 100, "precip" : 20}
+	],
+
+
+
+	"mondaybstn": [
+		{"day": "Monday", "temp": 80, "precip" : 13}
+	],
+
+	"tuesdaybstn": [
+		{"day": "Tuesday", "temp": 93, "precip" : 5.2}
+	],
+
+	"wednesdaybstn": [
+		{"day": "Wednesday", "temp": 64, "precip" : 0.3}
+	],
+
+	"thursdaybstn": [
+		{"day": "Thursday", "temp": 32, "precip" : 8}
+	],
+
+	"fridaybstn": [
+		{"day": "Friday", "temp": 46, "precip" : 40}
+	],
+
+	"saturdaybstn": [
+		{"day": "Saturday", "temp": 50, "precip" : 65}
+	]
+
+
+}
