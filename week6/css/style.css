@@ -11,7 +11,7 @@
 
 		p {
 			text-align:left;
-			margin-bottom:20px;
+			margin:20px;
 		}
 
 		/* remove button glow */
@@ -69,7 +69,7 @@
 		    width:11.5vw;
 			height:100vh;
 			float:left;
-			padding:0.5%;
+			padding:0 0.5%;
 		}
 
 		/* column colors */
