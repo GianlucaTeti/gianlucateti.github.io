@@ -1,0 +1,65 @@
+
+
+{
+
+
+	"sundayny": [
+		{"day": "Sunday", "temp": 100, "precip" : 20, "wind": 11}
+	],
+
+	"mondayny": [
+		{"day": "Monday", "temp": 80, "precip" : 13, "wind": 0.8}
+	],
+
+	"tuesdayny": [
+		{"day": "Tuesday", "temp": 93, "precip" : 5.2, "wind": 3.2}
+	],
+
+	"wednesdayny": [
+		{"day": "Wednesday", "temp": 64, "precip" : 0.3, "wind": 5.6}
+	],
+
+	"thursdayny": [
+		{"day": "Thursday", "temp": 32, "precip" : 8, "wind": 2.1}
+	],
+
+	"fridayny": [
+		{"day": "Friday", "temp": 46, "precip" : 40, "wind": 11}
+	],
+
+	"saturdayny": [
+		{"day": "Saturday", "temp": 50, "precip" : 65, "wind": 24.7}
+	],
+
+
+
+	"sundaybstn": [
+		{"day": "Sunday", "temp": 100, "precip" : 20, "wind": 11}
+	],
+
+	"mondaybstn": [
+		{"day": "Monday", "temp": 80, "precip" : 13, "wind": 0.8}
+	],
+
+	"tuesdaybstn": [
+		{"day": "Tuesday", "temp": 93, "precip" : 5.2, "wind": 3.2}
+	],
+
+	"wednesdaybstn": [
+		{"day": "Wednesday", "temp": 64, "precip" : 0.3, "wind": 5.6}
+	],
+
+	"thursdaybstn": [
+		{"day": "Thursday", "temp": 32, "precip" : 8, "wind": 2.1}
+	],
+
+	"fridaybstn": [
+		{"day": "Friday", "temp": 46, "precip" : 40, "wind": 211}
+	],
+
+	"saturdaybstn": [
+		{"day": "Saturday", "temp": 50, "precip" : 65, "wind": 24.7}
+	]
+
+
+}
