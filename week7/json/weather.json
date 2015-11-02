@@ -6,22 +6,22 @@
 	"newyork": [
 	                {"day": "Sunday", "temp": 100, "precip" : 20, "wind": 11},
 	                {"day": "Monday", "temp": 80, "precip" : 13, "wind": 0.8},
-					{"day": "Tuesday", "temp": 93, "precip" : 5.2, "wind": 3.2},
-					{"day": "Wednesday", "temp": 64, "precip" : 0.3, "wind": 5.6},
-					{"day": "Thursday", "temp": 32, "precip" : 8, "wind": 2.1},
-					{"day": "Friday", "temp": 46, "precip" : 40, "wind": 11},
-					{"day": "Saturday", "temp": 50, "precip" : 65, "wind": 24.7}
+			{"day": "Tuesday", "temp": 93, "precip" : 5.2, "wind": 3.2},
+			{"day": "Wednesday", "temp": 64, "precip" : 0.3, "wind": 5.6},
+			{"day": "Thursday", "temp": 32, "precip" : 8, "wind": 2.1},
+			{"day": "Friday", "temp": 46, "precip" : 40, "wind": 11},
+			{"day": "Saturday", "temp": 50, "precip" : 65, "wind": 24.7}
 	            ],
 
 
 	"boston": [
 	                {"day": "Sunday", "temp": 100, "precip" : 20, "wind": 11},
 	                {"day": "Monday", "temp": 35, "precip" : 8, "wind": 4.2},
-					{"day": "Tuesday", "temp": 87, "precip" : 2.2, "wind": 1.4},
-					{"day": "Wednesday", "temp": 76, "precip" : 14, "wind": 6.8},
-					{"day": "Thursday", "temp": 93, "precip" : 5.2, "wind": 3.2},
-					{"day": "Friday", "temp": 64, "precip" : 0.3, "wind": 5.6},
-					{"day": "Saturday", "temp": 80, "precip" : 13, "wind": 0.8}
+			{"day": "Tuesday", "temp": 87, "precip" : 2.2, "wind": 1.4},
+			{"day": "Wednesday", "temp": 76, "precip" : 14, "wind": 6.8},
+			{"day": "Thursday", "temp": 93, "precip" : 5.2, "wind": 3.2},
+			{"day": "Friday", "temp": 64, "precip" : 0.3, "wind": 5.6},
+			{"day": "Saturday", "temp": 80, "precip" : 13, "wind": 0.8}
 	            ]
 
 }
