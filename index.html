@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+	<link href="css/style.css" rel="stylesheet">
+	<title>Midterm Weather App - Gianluca Teti</title>
+
+</head>
+
+<body>
+	
+	<!-- columns w/warm colors -->
+<!--	<div id="box1" class="square" ></div>
+	<div id="box2" class="square"></div>
+	<div id="box3" class="square"></div>
+	<div id="box4" class="square"></div>
+	<div id="box5" class="square" ></div>
+	<div id="box6" class="square"></div>
+	<div id="box7" class="square"></div>
+	<div id="box8" class="square"></div>-->
+
+	<!-- columns w/cold colors -->
+<!--	<div id="box9" class="square" ></div>
+	<div id="box10" class="square"></div>
+	<div id="box11" class="square"></div>
+	<div id="box12" class="square"></div>
+	<div id="box13" class="square" ></div>
+	<div id="box14" class="square"></div>
+	<div id="box15" class="square"></div>
+	<div id="box16" class="square"></div>
+-->
+	<!-- yellow button -->	
+	<button class="btn" id="btn1"><span class="vertical">New York</span></button>
+	
+	<!--  light-blue button -->	
+	<button class="btn" id="btn2"><span class="vertical">Boston</span></button>
+
+    <script>
+	$(document).ready(function(){
+			// warm colors
+		    $("#btn1").click(function(){
+				
+				// yellow button animation out
+				if ( $(this).hasClass( "active" ) ) {
+			    	$(this).removeClass('active');
+			    	$(this).animate({top:'-50%'}, 500);
+			    	$(this).animate({height:'50vh'}, 500);
+			    	setTimeout( function(){
+				      $("#btn2").css('z-index','0');
+				    },1000);
+				} 
+				
+				// yellow button animation in
+				else {
+			    	$(this).css('z-index', 10000);
+			    	$(this).addClass('active');
+			    	$(this).animate({top:'0'}, 500);
+			    	$(this).animate({height:'100vh'}, 500);
+				}
+
+		    	// warm columns fading
+		        $("#box1").fadeToggle(400);
+		        $("#box2").fadeToggle(1400);
+		        $("#box3").fadeToggle(1200);
+		        $("#box4").fadeToggle(1000);
+		        $("#box5").fadeToggle(800);
+		        $("#box6").fadeToggle(600);
+		        $("#box7").fadeToggle(400);
+		        $("#box8").fadeToggle(200);
+		    });
+
+			// cold colors
+		    $("#btn2").click(function(){
+
+		    	// light-blue animation out
+				if ( $(this).hasClass( "active" ) ) {
+			    	$(this).removeClass('active');
+			    	$(this).animate({top:'50%'}, 500);
+			    	$(this).animate({height:'50vh'}, 500);
+			    	setTimeout( function(){
+				      $("#btn2").css('z-index','0');
+				    },1000);
+				} 
+
+		    	// light-blue button animation in
+				else {
+			    	$(this).css('z-index', 10000);
+			    	$(this).addClass('active');
+			    	$(this).animate({top:'0'}, 500);
+			    	$(this).animate({height:'100vh'}, 500);
+				}
+
+		    	// cold columns fading
+		        $("#box9").fadeToggle(400);
+		        $("#box10").fadeToggle(1400);
+		        $("#box11").fadeToggle(1200);
+		        $("#box12").fadeToggle(1000);
+		        $("#box13").fadeToggle(800);
+		        $("#box14").fadeToggle(600);
+		        $("#box15").fadeToggle(400);
+		        $("#box16").fadeToggle(200);
+		    });
+
+	    // load the json file 
+	    $.getJSON("json/weather.json",function( data ) {
+
+			// NEW YORK
+			// loop through each element in the JSON weather array 
+			var boxCounter = 2;
+			$.each( data.newyork, function( key, val ) {
+				createDiv(boxCounter);
+				console.log("val");
+			    // create a new p element that contains data from the JSON
+			    var el2 = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
+			    // add the <p> element to the <div> tag
+			    $('#box'+boxCounter).append(el2);  //NOTE: here we add the boxCounter variable to the selector name
+			    boxCounter++; 					  // NOTE: then we increment the boxCounter for the next loop
+			});
+
+
+			// BOSTON
+			// loop through each element in the JSON weather array 
+			var boxCounter = 10;
+			$.each( data.boston, function( key, val ) {
+				createDiv(boxCounter);
+			    // create a new p element that contains data from the JSON
+			    var el = $("<p><span class='dayname'>" + val.day + "</span><br> Temp.: " + val.temp + "<br>Prec.: " + val.precip + "%<br> Wind: " + val.wind + "mph</p>");
+			    // add the <p> element to the <div> tag
+			    $('#box'+boxCounter).append(el);  //NOTE: here we add the boxCounter variable to the selector name
+			    boxCounter++; 					  // NOTE: then we increment the boxCounter for the next loop
+			});
+
+
+	    });
+		
+		function createDiv(boxCounter){
+			$('<div id="#box'+boxNumber+'" class="square">').appendTo('body');	
+		}
+	});
+    </script>
+</body>
+</html>

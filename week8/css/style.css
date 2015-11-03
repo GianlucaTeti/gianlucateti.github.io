@@ -30,7 +30,6 @@
 			border:0;
 			cursor:pointer;
 			z-index:0;
-			min-width:150px;
 
 		}
 
@@ -69,11 +68,10 @@
 		/* general column settings */
 		.square {
 			display:none;
-		    width:11.5vw;
+		    width:11.4vw;
 			height:100vh;
 			float:left;
 			padding:0 0.5%;
-			min-width:150px;
 		}
 
 		.dayname {
@@ -150,8 +148,13 @@
 			color:#4faFF7;
 		}
 		
-		@media screen and (max-width: 1800px) {
+		@media screen and (max-width: 1600px) {
 			.dayname {
 					font-size:12px;
 			}
+			
+			p {
+				font-size:12px;
+			}
+		
 		}
