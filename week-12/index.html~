@@ -153,8 +153,6 @@
         function parsePhotos(json) {
             // if there are existing photos, remove them
             $('#photos').empty();
-            $('#photos3').empty();
-
             // loop through each object and extract the data we want
             $.each(json.data, function(key, val) {
                 // get a reference to the photo, user, and username
