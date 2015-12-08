@@ -46,11 +46,11 @@
             padding-bottom:50px;
         }
 
-        .left {
+        .right {
             background-color:#ff0084;
         }
 
-        .right {
+        .left {
             background-color:#004879;
         }        
         
@@ -122,6 +122,15 @@
         } /* IE 10+ */
 
     </style>
+    
+    <script type="text/javascript">
+        function populate(){
+            var tag = document.getElementById('tag').value;
+            document.getElementById('photos3').innerHTML = getFlickr.html[tag].replace(/_m\.jpg/g,'_s.jpg');
+            //document.getElementById('tags').innerHTML = getFlickr.tags[tag];
+            //return false;
+        }
+    </script>
 
     <script>
     $(document).ready(function() {
@@ -167,19 +176,10 @@
                     $('#' + val.id).html(this);
                 });
                 // add a new list item for the current object with a loading indicator
-                $('<li id="' + val.id + '"><img src="images/wait.gif"/></li>').appendTo('#photos3');
+                $('<li id="' + val.id + '"></li>').appendTo('#photos');
             });
         }
     });
-    </script>
-
-    <script type="text/javascript">
-        function populate(){
-            var tag = document.getElementById('tag').value;
-            document.getElementById('photos').innerHTML = getFlickr.html[tag].replace(/_m\.jpg/g,'_s.jpg');
-            document.getElementById('tags').innerHTML = getFlickr.tags[tag];
-            return false;
-        }
     </script>
 
 </head>
@@ -192,12 +192,12 @@
         </form>
 
         <div class="photocontainer left">
-            <h3>Flickr</h3>
+            <h3>Instagram</h3>
             <ul id="photos"></ul>
         </div>
   
         <div class="photocontainer right">
-            <h3>Instagram</h3>        
+            <h3>Flickr</h3>        
             <ul id="photos3"></ul>
         </div>
     </div>
