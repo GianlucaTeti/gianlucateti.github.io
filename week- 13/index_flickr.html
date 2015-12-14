@@ -1,0 +1,28 @@
+<!-- Thanks to getFlickr! https://24ways.org/2006/flickr-photos-on-demand -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<title>Flickr Research Form</title>
+	<script type="text/javascript" src="getflickr.js"></script>
+	<link rel="stylesheet" href="getflickr.css" type="text/css">
+
+	<script type="text/javascript">
+		function populate(){
+		    var tag = document.getElementById('tag').value;
+			document.getElementById('photos').innerHTML = getFlickr.html[tag].replace(/_m\.jpg/g,'_s.jpg');
+			document.getElementById('tags').innerHTML = getFlickr.tags[tag];
+			return false;
+		}
+	</script>
+	</head>
+<body>
+
+<h2>Search by Tag</h2>
+<form onsubmit="getFlickr.leech(document.getElementById('tag').value, 'populate');return false">
+	<label for="tag">Enter Tag</label><input type="text" id="tag" name="tag" /><input type="submit" value="energize" />
+</form>
+<h3>Photos:</h3><ul id="photos"></ul>
+</body>
+</html>
